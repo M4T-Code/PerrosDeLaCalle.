@@ -1,0 +1,65 @@
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.nos{
+    margin-bottom: 40px;
+}
+.text-center {
+    text-align: center;
+    background-color: $blanco;
+    margin: 0px;
+    color: $gris;
+}
+.row{
+    padding: 25px;
+    margin: 0;
+    img{
+        filter: grayscale(100%);
+    }
+}
+
+.row img:hover{
+    transform: scale(1.05);
+    transition: all 0.8s;
+    filter: grayscale(0%);
+}
+
+.instalaciones{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+@mixin foto ($fondo){
+    background-image: $fondo;
+    background-position: center;
+    background-size: cover;
+    width: 310px;
+    height: 200px;
+    margin: 15px;
+    padding: 10px 10px 20px 20px;
+    border: 5px solid $gris;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px #000;
+        &:hover{
+            transform: scale(1.08);
+            transition: all 1s;
+        }
+}
+.foto1{
+@include foto (url(../img/instalaciones.jpg));
+}
+.foto2{
+@include foto (url(../img/instalaciones_2.jpg));
+}
+.foto3{
+@include foto (url(../img/instalaciones_3.jpg));
+}
+.foto4{
+@include foto (url(../img/instalaciones_4.jpg));
+}
